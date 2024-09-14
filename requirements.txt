@@ -1,0 +1,3 @@
+decouple
+python-telegram-bot
+azure-ai-inference

@@ -3,7 +3,6 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, Updater
 import azure_module
 
-
 #Variables initialization
 TOKEN: Final = '7282759803:AAFa4FAXr_FbbypaIwtWz92ytPgSmHK0I9c'
 BOT_USERNAME: Final = '@SomeGPT4o_bot'
