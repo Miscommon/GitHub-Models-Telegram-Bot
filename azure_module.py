@@ -1,11 +1,15 @@
 from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
+from dotenv import dotenv_load
+import os
+
+dotenv_load()
 
 def response_request(text: str) -> str:
     endpoint = "https://models.inference.ai.azure.com"
-    model_name = "gpt-4o"
-    token = "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"
+    model_name = os.getenv("MODEL_NAME")
+    token = os.getenv("GITHUB_KEY")
 
     client = ChatCompletionsClient(endpoint=endpoint, credential=AzureKeyCredential(token),)
     response = client.complete(

@@ -2,12 +2,16 @@ from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, Updater
 import azure_module
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 #Variables initialization
-TOKEN: Final = '7282759803:AAFa4FAXr_FbbypaIwtWz92ytPgSmHK0I9c'
-BOT_USERNAME: Final = '@SomeGPT4o_bot'
+TOKEN = os.getenv("TOKEN")
+BOT_USERNAME = os.getenv("BOT_USERNAME")
 
-#Commandlets
+#Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Thank you for testing this bot! \n" + 
                                     "\n" +
