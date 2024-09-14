@@ -1,10 +1,10 @@
 from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
-from dotenv import dotenv_load
+from dotenv import load_dotenv
 import os
 
-dotenv_load()
+load_dotenv()
 
 def response_request(text: str) -> str:
     endpoint = "https://models.inference.ai.azure.com"
