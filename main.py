@@ -19,12 +19,12 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Просто спрашивайте бота о чем либо, и нейросеть ответит на ваш вопрос. Главное: не стоит спрашивать о неприличных и ужасных вещах по типу вреда себе! \n" +
-                                    "Также вы можете добавить GPT в группу, и тогда, любой участник может задать вопрос нейросети просто добавив @SomeGPT4o_bot в начало сообщения. \n" +
+                                    f"Также вы можете добавить GPT в группу, и тогда, любой участник может задать вопрос нейросети просто добавив {BOT_USERNAME} в начало сообщения. \n" +
                                     "\n" +
                                     "Just ask the bot about anything, and the neural network will answer your question. The main thing: do not ask about indecent and terrible things like harming yourself! \n" +
-                                    "You can also add GPT to the group, and then any participant can ask the neural network a question simply by adding @SomeGPT4o_bot to the beginning of the message. \n" +
+                                    f"You can also add GPT to the group, and then any participant can ask the neural network a question simply by adding {BOT_USERNAME} to the beginning of the message. \n" +
                                     "\n" +
-                                    "Contact the developer/Связаться с разоаботчиком: @S0lnyx")
+                                    "Contact the developer/Связаться с разоаботчиком: ")
 
 async def test_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(azure_module.response_request("test"))
