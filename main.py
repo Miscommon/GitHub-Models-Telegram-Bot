@@ -4,17 +4,20 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import azure_module
 import os
 from dotenv import load_dotenv
+import configparser
 
 load_dotenv()
+config = configparser.ConfigParser()
 
 #Variables initialization
 TOKEN = os.getenv("TOKEN")
 BOT_USERNAME = os.getenv("BOT_USERNAME")
+config.read('config.ini')
 
 #Bot responses
-cmd_help_text = ""
-cmd_test_promt = ""
-cmd_start_text = ""
+cmd_help_text = config['Responses']['Help_command_response']
+cmd_test_promt = config['Responses']['Test_command_promt']
+cmd_start_text = config['Responses']['Start_command_response']
 
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
