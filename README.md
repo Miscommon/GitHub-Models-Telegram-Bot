@@ -32,15 +32,15 @@
 
  7. Customize bot responses for `/help` `/start` and `/test`
  To change bot responses on these commands, edit cofig.ini file
- ``
+ ```
  Help_command_response - Text of the message after /help command
  Start_command_response - Text of the message after /start command
  Test_command_promt - Prompt for model to check functionality (/test)
- ``
+ ```
  8. Start the bot
- ``
+ ```
  python3 main.py
- ``
+ ```
 
  Done!
 
