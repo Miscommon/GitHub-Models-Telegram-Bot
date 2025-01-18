@@ -31,7 +31,7 @@
  Save .env file
 
  7. Customize bot responses for `/help` `/start` and `/test`
- To change bot responses on these commands, edit cofig.ini file
+ To change bot responses on these commands, edit `config.ini` file
  ```
  Help_command_response - Text of the message after /help command
  Start_command_response - Text of the message after /start command
