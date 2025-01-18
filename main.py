@@ -12,6 +12,7 @@ config = configparser.ConfigParser()
 #Variables initialization
 TOKEN = os.getenv("TOKEN")
 BOT_USERNAME = os.getenv("BOT_USERNAME")
+MODEL = os.getenv("MODEL_NAME")
 config.read('config.ini')
 
 #Bot responses
@@ -49,7 +50,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         response: str = response_handler(text)
 
-    print(f'[LOG] GPT-4o: {response}')
+    print(f'[LOG] {MODEL}: {response}')
     await update.message.reply_text(f'{response}')
 
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
